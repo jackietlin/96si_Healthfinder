@@ -7,21 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2F4E281DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F4E271DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift */; };
+		4F2F4E2E1DAB9224007FFE8D /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F4E2D1DAB9224007FFE8D /* ContentViewController.swift */; };
 		4F61CF5B1DAAC5D900DA9E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61CF5A1DAAC5D900DA9E50 /* AppDelegate.swift */; };
-		4F61CF5D1DAAC5D900DA9E50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61CF5C1DAAC5D900DA9E50 /* ViewController.swift */; };
 		4F61CF601DAAC5D900DA9E50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F61CF5E1DAAC5D900DA9E50 /* Main.storyboard */; };
 		4F61CF621DAAC5D900DA9E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F61CF611DAAC5D900DA9E50 /* Assets.xcassets */; };
 		4F61CF651DAAC5D900DA9E50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F61CF631DAAC5D900DA9E50 /* LaunchScreen.storyboard */; };
+		4F61CF741DAACC8800DA9E50 /* HealthFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61CF731DAACC8800DA9E50 /* HealthFinderViewController.swift */; };
+		5168879E794F5D9B980BF3D1 /* Pods_HealthFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9064CD376D18CFDCB217884A /* Pods_HealthFinder.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172D14637A1BA4F79A0C13C7 /* Pods-HealthFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		4F2F4E031DAB5788007FFE8D /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AFNetworking; path = Pods/AFNetworking/AFNetworking; sourceTree = "<group>"; };
+		4F2F4E271DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthFinderTableViewCell.swift; sourceTree = "<group>"; };
+		4F2F4E2D1DAB9224007FFE8D /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		4F61CF571DAAC5D900DA9E50 /* HealthFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F61CF5A1DAAC5D900DA9E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F61CF5C1DAAC5D900DA9E50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F61CF5F1DAAC5D900DA9E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F61CF611DAAC5D900DA9E50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F61CF641DAAC5D900DA9E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F61CF661DAAC5D900DA9E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F61CF731DAACC8800DA9E50 /* HealthFinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthFinderViewController.swift; sourceTree = "<group>"; };
+		5EEDA161F5E515929297CFC3 /* Pods-HealthFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder.release.xcconfig"; sourceTree = "<group>"; };
+		9064CD376D18CFDCB217884A /* Pods_HealthFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +38,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5168879E794F5D9B980BF3D1 /* Pods_HealthFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CF0BE9202726C2D35E20475 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				172D14637A1BA4F79A0C13C7 /* Pods-HealthFinder.debug.xcconfig */,
+				5EEDA161F5E515929297CFC3 /* Pods-HealthFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4F61CF4E1DAAC5D900DA9E50 = {
 			isa = PBXGroup;
 			children = (
 				4F61CF591DAAC5D900DA9E50 /* HealthFinder */,
 				4F61CF581DAAC5D900DA9E50 /* Products */,
+				0CF0BE9202726C2D35E20475 /* Pods */,
+				C60F48FE31C2BD89D0B82328 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +75,33 @@
 		4F61CF591DAAC5D900DA9E50 /* HealthFinder */ = {
 			isa = PBXGroup;
 			children = (
-				4F61CF5A1DAAC5D900DA9E50 /* AppDelegate.swift */,
-				4F61CF5C1DAAC5D900DA9E50 /* ViewController.swift */,
+				4F61CF6C1DAAC60C00DA9E50 /* Supporting Files */,
 				4F61CF5E1DAAC5D900DA9E50 /* Main.storyboard */,
+				4F61CF731DAACC8800DA9E50 /* HealthFinderViewController.swift */,
+				4F2F4E271DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift */,
+				4F2F4E2D1DAB9224007FFE8D /* ContentViewController.swift */,
+			);
+			path = HealthFinder;
+			sourceTree = "<group>";
+		};
+		4F61CF6C1DAAC60C00DA9E50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F61CF5A1DAAC5D900DA9E50 /* AppDelegate.swift */,
 				4F61CF611DAAC5D900DA9E50 /* Assets.xcassets */,
 				4F61CF631DAAC5D900DA9E50 /* LaunchScreen.storyboard */,
 				4F61CF661DAAC5D900DA9E50 /* Info.plist */,
 			);
-			path = HealthFinder;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C60F48FE31C2BD89D0B82328 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F2F4E031DAB5788007FFE8D /* AFNetworking */,
+				9064CD376D18CFDCB217884A /* Pods_HealthFinder.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F61CF691DAAC5D900DA9E50 /* Build configuration list for PBXNativeTarget "HealthFinder" */;
 			buildPhases = (
+				F3DAF096430BCA583920C2C4 /* [CP] Check Pods Manifest.lock */,
 				4F61CF531DAAC5D900DA9E50 /* Sources */,
 				4F61CF541DAAC5D900DA9E50 /* Frameworks */,
 				4F61CF551DAAC5D900DA9E50 /* Resources */,
+				91796E24CFD7BF655D413190 /* [CP] Embed Pods Frameworks */,
+				509CE70C2D81BC26A615A396 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +139,7 @@
 				TargetAttributes = {
 					4F61CF561DAAC5D900DA9E50 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -130,12 +174,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		509CE70C2D81BC26A615A396 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91796E24CFD7BF655D413190 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3DAF096430BCA583920C2C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4F61CF531DAAC5D900DA9E50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F61CF5D1DAAC5D900DA9E50 /* ViewController.swift in Sources */,
+				4F2F4E2E1DAB9224007FFE8D /* ContentViewController.swift in Sources */,
+				4F2F4E281DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift in Sources */,
+				4F61CF741DAACC8800DA9E50 /* HealthFinderViewController.swift in Sources */,
 				4F61CF5B1DAAC5D900DA9E50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,23 +341,27 @@
 		};
 		4F61CF6A1DAAC5D900DA9E50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172D14637A1BA4F79A0C13C7 /* Pods-HealthFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HealthFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cs96si.HealthFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4F61CF6B1DAAC5D900DA9E50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EEDA161F5E515929297CFC3 /* Pods-HealthFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HealthFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cs96si.HealthFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -286,6 +384,7 @@
 				4F61CF6B1DAAC5D900DA9E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
