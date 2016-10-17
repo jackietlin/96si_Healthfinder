@@ -9,8 +9,9 @@
 import UIKit
 import AFNetworking
 
-class HealthFinderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HealthFinderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, HealthFinderFiltersDelegate {
 
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
     // call Class variables with self.variablename >>> for example, self.topics
@@ -19,11 +20,18 @@ class HealthFinderViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 160
+        searchBar.delegate = self
+    }
 
+    func searchWithQuery(query: String) {
+        if (query == "") {
+            return
+        }
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
-        let url = URL(string: "https://healthfinder.gov/developer/MyHFSearch.json?api_key=demo_api_key&who=child&age=16&gender=male")
+        // Shows only whatever you search
+        let url = URL(string: "https://healthfinder.gov/api/v2/topicsearch.json?api_key=demo_api_key&Keyword=\(query)")
         let request = URLRequest(url: url!)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
@@ -33,11 +41,42 @@ class HealthFinderViewController: UIViewController, UITableViewDataSource, UITab
                 if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
                     // responseDictionary exists
                     if let results = responseDictionary["Result"] as? NSDictionary {
-                        print("response \(results)")
-                        //must call self here because topics is a Class variable, but Swift is too dumb to remember that
-                        self.topics = results["Topics"] as? [NSDictionary]
-                        //reload the view after downloading data!
-                        self.tableView.reloadData()
+                        if let resources = results["Resources"] as? NSDictionary {
+                            if let topics = resources["Resource"] as? [NSDictionary] {
+                                print("response \(topics)")
+                                //must call self here because topics is a Class variable, but Swift is too dumb to remember that
+                                self.topics = topics
+                                //reload the view after downloading data!
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }//.resume()
+        task.resume()
+    }
+    
+    func searchWithFilters(age: Int, gender: String) {
+        // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
+        // Shows topic list w filters applied
+        let url = URL(string: "https://healthfinder.gov/developer/MyHFSearch.json?api_key=demo_api_key&who=child&age=\(age)&gender=\(gender)")
+        let request = URLRequest(url: url!)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        
+        // Send a request w dataTask, get a response back with (dataOrNil, response, err)
+        let task = session.dataTask(with: request) { (dataOrNil, response, err) in
+        if let data = dataOrNil {
+            if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                // responseDictionary exists
+                if let results = responseDictionary["Result"] as? NSDictionary {
+                    print("response \(results["Topics"])")
+                    //must call self here because topics is a Class variable, but Swift is too dumb to remember that
+                    self.topics = results["Topics"] as? [NSDictionary]
+                    //reload the view after downloading data!
+                    self.tableView.reloadData()
                     }
                 }
             }
@@ -45,10 +84,26 @@ class HealthFinderViewController: UIViewController, UITableViewDataSource, UITab
         task.resume()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    /* HealthFinderFiltersDelegate */
+    
+    func filtersWereUpdated(gender: String, age: Int) {
+        searchWithFilters(age: age, gender: gender)
+        
+    }
+
+    /* UISearchBarDelegate */
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchWithQuery(query: searchText)
+    }
+    
+    /* UITableViewDelegate */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let topics = self.topics {
@@ -95,7 +150,7 @@ class HealthFinderViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "AccessContent", sender: tableView.cellForRow(at: indexPath)) // we're passing indexPath here, so we know in "prepare
+        performSegue(withIdentifier: "AccessContent", sender: tableView.cellForRow(at: indexPath)) // we're passing indexPath here, so we know in "prepare"
     }
     
     //this happens with the "AccessContent" segue after performSegue before reaches VC
@@ -105,6 +160,10 @@ class HealthFinderViewController: UIViewController, UITableViewDataSource, UITab
             let indexPath = tableView.indexPath(for: cell) // cellForRow vs indexPath methods
             let destination = segue.destination as! ContentViewController
             destination.content = topics![indexPath!.row]["Sections"] as? [NSDictionary]
+        }
+        if (segue.identifier == "filters_segue") {
+            let destinationVC = segue.destination as! HealthFinderFiltersViewController
+            destinationVC.delegate = self
         }
     }
  

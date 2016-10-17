@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F2F4E281DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F4E271DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift */; };
 		4F2F4E2E1DAB9224007FFE8D /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F4E2D1DAB9224007FFE8D /* ContentViewController.swift */; };
+		4F35878C1DB4D10C0035ECE8 /* HealthFinderFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35878B1DB4D10C0035ECE8 /* HealthFinderFiltersViewController.swift */; };
 		4F61CF5B1DAAC5D900DA9E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61CF5A1DAAC5D900DA9E50 /* AppDelegate.swift */; };
 		4F61CF601DAAC5D900DA9E50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F61CF5E1DAAC5D900DA9E50 /* Main.storyboard */; };
 		4F61CF621DAAC5D900DA9E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F61CF611DAAC5D900DA9E50 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		4F2F4E031DAB5788007FFE8D /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AFNetworking; path = Pods/AFNetworking/AFNetworking; sourceTree = "<group>"; };
 		4F2F4E271DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthFinderTableViewCell.swift; sourceTree = "<group>"; };
 		4F2F4E2D1DAB9224007FFE8D /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		4F35878B1DB4D10C0035ECE8 /* HealthFinderFiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthFinderFiltersViewController.swift; sourceTree = "<group>"; };
 		4F61CF571DAAC5D900DA9E50 /* HealthFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F61CF5A1DAAC5D900DA9E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F61CF5F1DAAC5D900DA9E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				4F61CF731DAACC8800DA9E50 /* HealthFinderViewController.swift */,
 				4F2F4E271DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift */,
 				4F2F4E2D1DAB9224007FFE8D /* ContentViewController.swift */,
+				4F35878B1DB4D10C0035ECE8 /* HealthFinderFiltersViewController.swift */,
 			);
 			path = HealthFinder;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				4F2F4E2E1DAB9224007FFE8D /* ContentViewController.swift in Sources */,
 				4F2F4E281DAB6FFA007FFE8D /* HealthFinderTableViewCell.swift in Sources */,
 				4F61CF741DAACC8800DA9E50 /* HealthFinderViewController.swift in Sources */,
+				4F35878C1DB4D10C0035ECE8 /* HealthFinderFiltersViewController.swift in Sources */,
 				4F61CF5B1DAAC5D900DA9E50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
